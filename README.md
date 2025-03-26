@@ -1,2 +1,2 @@
 # eq3_NextCRUD
-oye como va
+Proyecto simple para mostrar conceptos base de Next.js
