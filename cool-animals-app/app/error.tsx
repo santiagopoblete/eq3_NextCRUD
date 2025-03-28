@@ -20,7 +20,7 @@ const ErrorPage: React.FC<ErrorPageProps> = ({ error, reset }) => {
                 Try Again
             </button>
 
-            <button onClick={() => window.location.href = '/'} className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded mt-4">
+            <button onClick={() => window.location.href = '/'} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4">
                 Go Back Home
             </button>
     
