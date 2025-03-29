@@ -21,9 +21,9 @@ async function getFishData(fishName: string) {
 }
 
 export default async function Fish() {
-    const fishData = await getFishData('clownFish');
+    const fishData = await getFishData('clownfish');
 
-    if (!fishData) {
+    if (fishData.length==0 || !fishData) {
         redirect('/');
     }
 

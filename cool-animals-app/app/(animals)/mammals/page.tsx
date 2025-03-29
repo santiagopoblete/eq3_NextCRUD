@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image";
 import HomeLink from "@/components/HomeLink";
 
@@ -10,6 +12,7 @@ export default function Mammals() {
         <p className="mt-2">I hope you like it!</p>
         <p className="mt-2">If you want to see more cool mammals follow the links below!</p>
         <HomeLink />
+        <button className="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={() => {window.history.pushState(null,'', 'pushedElephant')}}> Elephant </button>
         </div>
     
     );
