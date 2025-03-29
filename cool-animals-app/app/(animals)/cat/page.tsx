@@ -1,6 +1,7 @@
 'use client'
 import { useActionState } from "react";
 import Image from "next/image";
+import HomeLink from "@/components/HomeLink";
 
 async function meow(previousState: any) {
   await new Promise(resolve => {
@@ -8,10 +9,10 @@ async function meow(previousState: any) {
   });
 
   if(Math.floor(Math.random() * 3) == 2){
-    return "Error"
+    return "Sorry no meows for you! ERROR!";
   }
 
-  if(previousState=="Error"){
+  if(previousState=="Sorry no meows for you! ERROR!"){
     return "Meow"
   } else {
     return previousState+"w";
@@ -22,10 +23,11 @@ export default function StatefulForm({}) {
   const [state, formAction, pending] = useActionState(meow, 'Meow');
   return (
     <form>
-      <div className="flex flex-col items-center justify-center min-h-screen py-2">
+      <div className="flex flex-col items-center justify-center min-h-screen py-2 gap-4">
       <Image src="https://images.pexels.com/photos/1576193/pexels-photo-1576193.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" width={600} height={500} alt="Thats a cat!"/>
       {pending? "Loading..." : state}
       <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" formAction={formAction} disabled={pending}>Meow</button>
+      <HomeLink />
       </div>
     </form>
   )
