@@ -3,8 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import AuthButton from "@/components/AuthButton";
-import { use } from "react";
 
 export default function Home() {
   const router = useRouter()
@@ -29,12 +27,14 @@ export default function Home() {
         <Link href="/reptiles" className="text-blue-500 hover:text-blue-700">
           Reptiles
         </Link>
-      </div>
-      <AuthButton />
-      <div style={{margin:10}}>
-      <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick={()=> router.push('/cat')}>
+        <button className="text-blue-500 hover:text-blue-700" onClick={()=> router.push('/cat')}>
             Cat
-      </button>
+        </button>
+        <button className="text-blue-500 hover:text-blue-700" onClick={()=> router.push('/encyclopedia')}>
+            Encyclopedia
+        </button>
+      </div>
+      <div style={{margin:10}}>
       </div>
     </div>
 
