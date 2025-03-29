@@ -9,7 +9,9 @@ Ejemplo de Window.history en página Mammals.
 
 ## Redirecting
 Ejemplo de redirects en next.config.ts.
+Redirecciona /hello a la página principal.
 Ejemplo de NextResponse.redirect en middleware.ts.
+Redirecciona toda dirección que inicie con /middleware a la dirección /cat.
 
 ## Error handling
 Ejemplo de errores esperados y uso de useActionState en página Cat.
